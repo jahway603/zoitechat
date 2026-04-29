@@ -34,7 +34,6 @@ jobs:
             openssl \
             libcanberra \
             libayatana-appindicator \
-            luajit \
             iso-codes \
             lua \
             perl \
