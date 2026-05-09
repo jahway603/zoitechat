@@ -3664,8 +3664,14 @@ mg_create_userlist (session_gui *gui, GtkWidget *box)
         gtk_box_pack_start (GTK_BOX (box), vbox, TRUE, TRUE, 0);
 
         gui->namelistinfo = gtk_label_new (NULL);
-        gtk_label_set_xalign (GTK_LABEL (gui->namelistinfo), 0.0f);
-        gtk_widget_set_halign (gui->namelistinfo, GTK_ALIGN_START);
+        gtk_label_set_xalign (GTK_LABEL (gui->namelistinfo), 0.5f);
+        gtk_label_set_justify (GTK_LABEL (gui->namelistinfo), GTK_JUSTIFY_CENTER);
+        gtk_label_set_ellipsize (GTK_LABEL (gui->namelistinfo), PANGO_ELLIPSIZE_END);
+        gtk_label_set_width_chars (GTK_LABEL (gui->namelistinfo), 1);
+        gtk_widget_set_margin_start (gui->namelistinfo, 0);
+        gtk_widget_set_margin_end (gui->namelistinfo, 0);
+        gtk_widget_set_hexpand (gui->namelistinfo, TRUE);
+        gtk_widget_set_halign (gui->namelistinfo, GTK_ALIGN_FILL);
         if (prefs.hex_gui_ulist_count)
                 gtk_box_pack_start (GTK_BOX (vbox), gui->namelistinfo, 0, 0, 0);
 
