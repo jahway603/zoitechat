@@ -1168,8 +1168,11 @@ set_showval (session *sess, const struct prefs *var, char *tbuf)
 	switch (var->type)
 	{
 		case TYPE_STR:
-			sprintf (tbuf + len, "\0033:\017 %s\n", (char *) &prefs + var->offset);
-			break;
+		{
+			const char *value = (char *) &prefs + var->offset;
+			sprintf (tbuf + len, "\0033:\017 %s\n", value ? value : "");
+		}
+		break;
 		case TYPE_INT:
 			sprintf (tbuf + len, "\0033:\017 %d\n", *((int *) &prefs + var->offset));
 			break;
