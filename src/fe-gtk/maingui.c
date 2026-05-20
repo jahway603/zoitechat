@@ -902,7 +902,12 @@ mg_windowstate_cb (GtkWindow *wid, GdkEventWindowState *event, gpointer userdata
 	if ((event->changed_mask & GDK_WINDOW_STATE_ICONIFIED) &&
 		 (event->new_window_state & GDK_WINDOW_STATE_ICONIFIED) &&
 		 prefs.hex_gui_tray_minimize && prefs.hex_gui_tray &&
-		 gtkutil_tray_icon_supported (wid))
+		 gtkutil_tray_icon_supported (wid)
+#ifndef WIN32
+		 )
+#else
+		 && !gtk_window_is_active (wid))
+#endif
 	{
 		tray_toggle_visibility (TRUE);
 	}
