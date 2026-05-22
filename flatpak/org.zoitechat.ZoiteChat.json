@@ -1,6 +1,5 @@
 {
   "app-id": "org.zoitechat.ZoiteChat",
-  "branch": "master",
   "runtime": "org.gnome.Platform",
   "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
@@ -69,8 +68,10 @@
       ],
       "sources": [
         {
-          "type": "dir",
-          "path": ".."
+          "type": "git",
+          "url": "https://github.com/ZoiteChat/zoitechat.git",
+          "tag": "zoitechat-2.18.1",
+          "commit": "6535810ca356bf9c4d15fca34df4fb883e2a61a5"
         },
         {
           "type": "patch",
