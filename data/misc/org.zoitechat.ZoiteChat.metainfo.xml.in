@@ -4,7 +4,7 @@
   <name>ZoiteChat</name>
   <launchable type="desktop-id">org.zoitechat.ZoiteChat.desktop</launchable>
 
-  <developer id="net.zoite">
+  <developer id="org.zoitechat">
     <name translate="no">ZoiteChat</name>
   </developer>
 

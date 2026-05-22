@@ -56,6 +56,9 @@
     {
       "name": "perl",
       "buildsystem": "simple",
+      "build-options": {
+        "no-debuginfo": true
+      },
       "build-commands": [
         "./Configure -des -Dprefix=/app -Dvendorprefix=/app -Duseshrplib -Dman1dir=none -Dman3dir=none",
         "make -j${FLATPAK_BUILDER_N_JOBS}",
@@ -107,7 +110,14 @@
           "type": "git",
           "url": "https://github.com/ZoiteChat/zoitechat.git",
           "tag": "zoitechat-2.18.1",
-          "commit": "6535810ca356bf9c4d15fca34df4fb883e2a61a5"
+          "commit": "479f1649efa0e5b166a7c7c9d86214b42ec9f794"
+        },
+        {
+          "type": "file",
+          "url": "https://publicsuffix.org/list/public_suffix_list.dat",
+          "sha256": "6f7f7d9e8c68447f1c74095a12574b7fee46b0cd759c518a659aee0615d8e118",
+          "dest": "src/common",
+          "dest-filename": "public_suffix_list.dat"
         },
         {
           "type": "patch",
