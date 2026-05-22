@@ -36,8 +36,6 @@ See [IRCHelp.org](http://irchelp.org) for information about IRC in general.
 For more information on ZoiteChat please read our [documentation](https://docs.zoitechat.org/):
 - [Downloads](https://zoitechat.org/download.php)
 
-- [Troubleshooting](troubleshooting.md)
-
 
 ---
 
